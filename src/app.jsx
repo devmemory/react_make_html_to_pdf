@@ -3,9 +3,11 @@ import makePdf from 'make_pdf'
 import './app.css'
 
 function App() {
+    const pdf = makePdf()
+
     const onClick = async (e) => {
         e.preventDefault()
-        await makePdf.viewWithPdf()
+        await pdf.viewWithPdf()
     }
 
     return (
